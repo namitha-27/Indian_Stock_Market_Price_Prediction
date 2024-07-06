@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Indian stockmarket price prediction using machine learning and deep learning</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename = 'img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static', filename = 'img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename = 'vendor/aos/aos.css')}}" rel="stylesheet">
+  
+  <link href="{{url_for('static',filename = 'vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename = 'css/style.css')}}" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Arsha - v4.6.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="">Indian stockmarket price prediction using machine learning and deep learning</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="notebook">Notebook</a></li>
+          <li><a class="nav-link scrollto active" href="login">Logout</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+   <!-- ======= Hero Section ======= -->
+   <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <!-- <h1>Better Solutions For Your Net Worth</h1>
+          <h2>We are team of talented analysts that can make you very rich..</h2> -->
+         
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{{url_for('static', filename = 'img/hero-img.png')}}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+  <main id="main">
+
+    <!-- ======= Cliens Section ======= -->
+    <section id="cliens" class="cliens section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename = 'img/clients/client-1.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename = 'img/clients/client-2.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename = 'img/clients/client-3.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename = 'img/clients/client-4.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename = 'img/clients/client-5.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename = 'img/clients/client-6.png')}}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Cliens Section -->
+<!-- Macroaxis Widget Start --><script src="https://www.macroaxis.com/widgets/url.jsp?t=42"></script><div class="macroaxis-copyright"></div><!-- Macroaxis Widget End -->
+
+<div class="page-wrapper">
+  <!-- Bread crumb -->
+  <div class="row page-titles">
+      <div class="col-md-5 align-self-center">
+          <!-- <h1><span class="top-heading-inner">Stock Market Analysis and Prediction for Nifty50 using LSTM Deep Learning Approach</span> </h1> -->
+          <h3 class="text-primary">TODAY'S {{quote}} STOCK DATA</h3> </div>
+      <div class="col-md-7 align-self-center">
+          
+      </div>
+  </div>
+  <!-- End Bread crumb -->
+  <!-- Container fluid  -->
+  <div class="container-fluid">
+      <!-- Start Page Content -->
+      <div class="row">
+          <div class="col-md-2">
+              <div class="card bg-primary p-20">
+                  <div class="media widget-ten">
+                      <div class="media-left meida media-middle">
+                          <span><i class="ti-bag f-s-40"></i></span>
+                      </div>
+                      <div class="media-body media-text-right">
+                          <h2 class="color-white text-white">{{open_s}}</h2>
+                          <p class="m-b-0 text-white">OPEN</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-2">
+              <div class="card bg-warning p-20">
+                  <div class="media widget-ten">
+                      <div class="media-left meida media-middle">
+                          <span><i class="ti-comment f-s-40"></i></span>
+                      </div>
+                      <div class="media-body media-text-right">
+                          <h2 class="color-white text-white">{{high_s}}</h2>
+                          <p class="m-b-0 text-white">HIGH</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="card bg-success p-20">
+                  <div class="media widget-ten">
+                      <div class="media-left meida media-middle">
+                          <span><i class="ti-vector f-s-40"></i></span>
+                      </div>
+                      <div class="media-body media-text-right">
+                          <h2 class="color-white text-white">{{low_s}}</h2>
+                          <p class="m-b-0 text-white">LOW</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="card bg-danger p-20">
+                  <div class="media widget-ten">
+                      <div class="media-left meida media-middle">
+                          <span><i class="ti-location-pin f-s-40"></i></span>
+                      </div>
+                      <div class="media-body media-text-right">
+                          <h2 class="color-white text-white">{{close_s}}</h2>
+                          <p class="m-b-0 text-white">CLOSE</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="card bg-warning p-20">
+                  <div class="media widget-ten">
+                      <div class="media-left meida media-middle">
+                          <span><i class="ti-comment f-s-40"></i></span>
+                      </div>
+                      <div class="media-body media-text-right">
+                          <h2 class="color-white text-white">{{adj_close}}</h2>
+                          <p class="m-b-0 text-white">ADJ CLOSE</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+          <div class="col-md-2">
+              <div class="card bg-primary p-20">
+                  <div class="media widget-ten">
+                      <div class="media-left meida media-middle">
+                          <span><i class="ti-bag f-s-40"></i></span>
+                      </div>
+                      <div class="media-body media-text-right">
+                          <h2 class="color-white text-white">{{vol}}</h2>
+                          <p class="m-b-0 text-white">VOLUME</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>RECENT TRENDS IN {{quote}} STOCK PRICES</h4>
+                            </div>
+                            <div class="sales-chart">
+                                <img src="{{url_for('static', filename='Trends.png')}}" />
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    <!-- /# column -->
+                    
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>Linear Regression MODEL ACCURACY</h4>
+                            </div>
+                            <div class="sales-chart">
+                                <img src="{{url_for('static', filename='LINEAR.png')}}" />
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>RNN MODEL ACCURACY</h4>
+                            </div>
+                            <div class="sales-chart">
+                                <img src="{{url_for('static', filename='RNN.png')}}" />
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>LSTM MODEL ACCURACY</h4>
+                            </div>
+                            <div class="team-chart">
+                                <img src="{{url_for('static', filename='LSTM.png')}}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>GRU MODEL ACCURACY</h4>
+                            </div>
+                            <div class="team-chart">
+                                <img src="{{url_for('static', filename='GRU.png')}}" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>BiLSTM MODEL ACCURACY</h4>
+                            </div>
+                            <div class="team-chart">
+                                <img src="{{url_for('static', filename='BISTLM.png')}}" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ARIMA PRED -->
+                    <div class="col-md-4">
+                        <div class="card bg-success p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-vector f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{linear_pred}}</h2>
+                                    <p class="m-b-0 text-white">TOMORROW'S {{quote}} CLOSING PRICE BY Linear Regression</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-success p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-vector f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{rnn_pred}}</h2>
+                                    <p class="m-b-0 text-white">TOMORROW'S {{quote}} CLOSING PRICE BY RNN</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- LSTM PRED -->
+                    <div class="col-md-4">
+                        <div class="card bg-warning p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-comment f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{lstm_pred}}</h2>
+                                    <p class="m-b-0 text-white">TOMORROW'S {{quote}} CLOSING PRICE BY LSTM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LR PRED -->
+                    <div class="col-md-4">
+                        <div class="card bg-danger p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-location-pin f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{gru_pred}}</h2>
+                                    <p class="m-b-0 text-white">TOMORROW'S {{quote}} CLOSING PRICE BY GRU</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-danger p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-location-pin f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{bilstm_pred}}</h2>
+                                    <p class="m-b-0 text-white">TOMORROW'S {{quote}} CLOSING PRICE BY BiLSTM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ARIMA ERR-->
+                    <div class="col-md-4">
+                        <div class="card bg-primary p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-vector f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{error_linear}}</h2>
+                                    <p class="m-b-0 text-white">Linear Regression RMSE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-primary p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-vector f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{error_rnn}}</h2>
+                                    <p class="m-b-0 text-white">RNN RMSE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- LSTM ERR -->
+                    <div class="col-md-4">
+                        <div class="card bg-primary p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-comment f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{error_lstm}}</h2>
+                                    <p class="m-b-0 text-white">LSTM RMSE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LR ERR -->
+                    <div class="col-md-4">
+                        <div class="card bg-primary p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-location-pin f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{error_gru}}</h2>
+                                    <p class="m-b-0 text-white">GRU RMSE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-primary p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-location-pin f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white text-white">{{error_bilstm}}</h2>
+                                    <p class="m-b-0 text-white">BiLSTM RMSE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+         
+
+        
+       
+
+
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!-- Vendor JS Files -->
+    <script src="{{url_for('static', filename = 'vendor/aos/aos.js')}}"></script>
+    <script src="{{url_for('static', filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{url_for('static', filename = 'vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'vendor/waypoints/noframework.waypoints.js')}}"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="{{url_for('static', filename = 'js/main.js')}}"></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  
+    <script type='text/javascript'> 
+      $(document).ready(function(){        
+        $('html, body').animate({
+        scrollTop: $('#navbar').offset().top
+      }, 'slow');
+
+      });
+    </script>
+</body>
+
+</html>
